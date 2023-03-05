@@ -13,7 +13,7 @@ export const Users = () => {
     <>
       <h1>Users</h1>
       {users.map(user => (
-        <li key={user.id}>{user.name}</li>
+        <li key={user.id}>{`${user.first_name}  ${user.last_name}`}</li>
       ))}
     </>
   )

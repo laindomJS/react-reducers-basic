@@ -7,8 +7,9 @@ export const useFetchReducer = (initialState, UsersReducer) => {
 
   const getUsers = async () => {
 		try {
-      const res = await fetch('https://jsonplaceholder.typicode.com/users');
-		  const data = await res.json();
+      const res = await fetch('https://reqres.in/api/users');
+		  const users = await res.json();
+      const { data } = users;
       dispatch({ type: GET_USERS, payload: data })
     } catch (err) {
       console.log(err);
